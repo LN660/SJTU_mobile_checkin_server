@@ -13,6 +13,8 @@ import MySQLdb.cursors
 import database
 from jalogin import JaLoginHandler
 from basic import CheckStatusHandler
+from sv import SpeechTrainHandler,SpeechDetectHandler
+
 
 class Application(tornado.web.Application):
 	def __init__(self):
