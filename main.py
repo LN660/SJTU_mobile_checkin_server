@@ -19,7 +19,9 @@ class Application(tornado.web.Application):
 		handlers = [
 			# Mobile API
 			(r"/jalogin", JaLoginHandler),
-			(r"/checkstatus", CheckStatusHandler)
+			(r"/checkstatus", CheckStatusHandler),
+			(r"/svdetect" , SpeechDetectHandler),
+			(r"/svtrain", SpeechTrainHandler),
 			# Admin
 			# Admin API
 		]

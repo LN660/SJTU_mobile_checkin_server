@@ -1,8 +1,5 @@
-# coding=gbk
-# $File: test_speech.py
-# $Date: Sat Jul 27 18:15:27 2013 +0800
-# $Author: ronnie.alonso@gmail.com
-#
+# coding: utf8
+
 
 import os , json , glob , string , sys
 from ctypes import cdll, c_int , c_char_p , c_double
