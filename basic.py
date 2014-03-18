@@ -1,6 +1,7 @@
 # coding: utf8
 
 import	tornado.web
+from datetime import datetime
 
 class BaseHandler(tornado.web.RequestHandler):
 	"""RequestHandler Base"""
@@ -18,7 +19,7 @@ class BaseHandler(tornado.web.RequestHandler):
 			path = 'data/' + loc + uid + "%d%d%d%d"%(s.hour,s.minute,s.second,s.microsecond)
 		# unicode error
 		return path.encode('utf8')
-		
+
 	@property
 	def db(self):
 		return self.application.db
