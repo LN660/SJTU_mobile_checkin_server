@@ -8,6 +8,17 @@ class BaseHandler(tornado.web.RequestHandler):
 		return self.get_secure_cookie("uid")
 	def get_sessionid(self):
 		return self.get_secure_cookie('sessionid')
+
+	def handle_filename(self , uid , filename , loc): # loc = "img/" or "audio/"
+		format = filename.rsplit('.' , 1)
+		s = datetime.now()
+		try:
+			path = 'data/'+ loc + uid + "%d%d%d%d."%(s.hour,s.minute,s.second,s.microsecond) + format[1]
+		except:
+			path = 'data/' + loc + uid + "%d%d%d%d"%(s.hour,s.minute,s.second,s.microsecond)
+		# unicode error
+		return path.encode('utf8')
+		
 	@property
 	def db(self):
 		return self.application.db
