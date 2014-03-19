@@ -187,7 +187,7 @@ class DetectCreateHandler(BaseHandler):
 			info = self.db.query('SELECT SESSIONID FROM DETECT WHERE OWNER = \'%s\' AND DETECTTIME = \'%s\'' % 
 			  (uid , now))
 			sessionid = info[0]['SESSIONID']
-		except e:
+		except:
 			self.write({"error":1})
 			return
 		self.set_secure_cookie("sessionid", str(sessionid), 1)
