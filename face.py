@@ -39,7 +39,7 @@ class FaceppHandler(BaseHandler):
 	def handle_request(self,response):
 		if response.error:
 			logging.info( 'error:1;info:'+response.error)
-			self.write({'error':1,'info':response.error})
+			self.write({'error':1})
 			self.finish()
 			return
 		else:
@@ -131,7 +131,7 @@ class FaceRegisterHandler(BaseHandler):
 	def handle_request(self,response):
 		if response.error:
 			logging.info(response.error)
-			self.write({'error':1,'info':response.error})
+			self.write({'error':1})
 			self.finish()
 			return
 		else:
