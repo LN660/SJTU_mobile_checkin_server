@@ -180,7 +180,7 @@ class FaceRegisterHandler(BaseHandler):
 		uploadfile = self.request.files.get('pic')
 
 		img_binary = uploadfile[0]['body']
-		img_name = uploadfile[0]['filename'].encode('gbk')
+		img_name = uploadfile[0]['filename'].encode('utf8')
 		tmp_path = self.handle_filename(self.uid , img_name , 'img/')
 		picfile = open(tmp_path,"wb")
 		picfile.write(img_binary)

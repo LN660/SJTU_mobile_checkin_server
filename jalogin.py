@@ -68,17 +68,17 @@ class JaLoginHandler(BaseHandler):
 			logging.debug(sql)
 			res = self.db.execute(sql)
 			
-			# # FACE++
-			# try:
-			# 	url = faceppKit.CreatePerson(uid,u'Students')
-			# 	response = urllib2.urlopen(url)
-			# 	person_create = response.read()
-			# except urllib2.URLError, e:
-			# 	if not hasattr(e, "code"):
-			# 		raise
-			# 	self.add_header('error',3)
-			# 	self.add_header('info',json.loads(e.read())['error'])
-			# 	# self.write({'error':3 , 'info':json.loads(e.read())['error']})
+			# FACE++
+			try:
+				url = faceppKit.CreatePerson(uid,u'Students')
+				response = urllib2.urlopen(url)
+				person_create = response.read()
+			except urllib2.URLError, e:
+				if not hasattr(e, "code"):
+					raise
+				self.add_header('error',3)
+				self.add_header('info',json.loads(e.read())['error'])
+				# self.write({'error':3 , 'info':json.loads(e.read())['error']})
 		else:
 			info=info[0]
 			if (not info['LOCID']) or (not info['DEPARTMENT']) or(not info['CHINAME']):
