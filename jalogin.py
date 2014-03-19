@@ -4,6 +4,7 @@ import logging
 import urllib
 import string
 import random
+import urllib
 from datetime import datetime
 
 import settings
