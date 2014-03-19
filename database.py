@@ -14,7 +14,7 @@ class DB:
 		return res
 
 	def query(self, sql):
-		self.query_all(sql)
+		return self.query_all(sql)
 
 	def execute(self, sql):
 		cur = self.mysqldb.cursor()
