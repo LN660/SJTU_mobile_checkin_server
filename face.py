@@ -130,7 +130,7 @@ class FaceRegisterHandler(BaseHandler):
 	@tornado.web.asynchronous
 	def handle_request(self,response):
 		if response.error:
-			logging.info('error:1;info:'+response.error)
+			logging.info(response.error)
 			self.write({'error':1,'info':response.error})
 			self.finish()
 			return
