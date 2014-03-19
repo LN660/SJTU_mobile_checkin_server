@@ -13,6 +13,9 @@ class DB:
 		cur.close()
 		return res
 
+	def query(self, sql):
+		self.query_all(sql)
+
 	def execute(self, sql):
 		cur = self.mysqldb.cursor()
 		try:
