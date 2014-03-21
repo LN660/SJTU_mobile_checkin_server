@@ -2,6 +2,9 @@
 
 import	tornado.web
 from datetime import datetime
+import logging
+
+from gps import spherical_distance
 
 class BaseHandler(tornado.web.RequestHandler):
 	"""RequestHandler Base"""
@@ -248,6 +251,7 @@ class DetectResultHandler(BaseHandler):
 		termitime = info['TERMITIME']
 
 		dis = spherical_distance(loc_detect , loc_init)
+		logging.debug(dis)
 		tim = starttime <= timedetect and timedetect <= termitime
 		
 		if (dis <= 4) and (facedetect >= 60) and (audiodetect > 0.6) and (tim):

@@ -5,6 +5,9 @@ import MySQLdb
 class DB:
 	def __init__(self, mysqldb):
 		self.mysqldb = mysqldb
+		cur = self.mysqldb.cursor()
+		cur.execute("SET NAMES 'utf8';")
+		cur.close()
 
 	def query_all(self, sql):
 		cur = self.mysqldb.cursor()

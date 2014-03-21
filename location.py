@@ -7,6 +7,7 @@
 import tornado.web
 import tornado.httpclient
 import os,json,string
+import logging
 from datetime import *
 from basic import BaseHandler
 
@@ -41,7 +42,8 @@ class UploadLocationHandler(BaseHandler):
 			decode_body = json.loads(self.request.body)
 			longitude = float(decode_body['longitude'])
 			latitude = float(decode_body['latitude'])
-		except:
+		except Exception, e:
+			logging.debug(e)
 			self.write({'error':2})
 			return
 		# print latitude,longitude

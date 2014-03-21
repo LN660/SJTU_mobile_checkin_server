@@ -11,13 +11,10 @@ import MySQLdb
 import MySQLdb.cursors
 
 import database
-from admin import AddAdminHandler , DefaultRuleHandler , AdminIndexHandler , TimeQueryHandler ,MapQueryHandler,SettingHandler,DeleteAdminHandler,ManageHandler,RuleHandler,CheckHandler,StudentEditHandler,StudentHandler,adminHandler,AdminJaLoginHandler,AdminJaLogoutHandler
-from jalogin import JaLoginHandler, JaLogoutHandler
-from basic import LoginHandler , RegisterHandler , DetectCreateHandler , DetectResultHandler ,CheckStatusHandler
-from face import FaceppHandler , FaceRegisterHandler
-from sv import SpeechTrainHandler,SpeechDetectHandler
-from location import UploadLocationHandler, LocationRegisterHandler
-
+from admin import AddAdminHandler, DefaultRuleHandler, AdminIndexHandler, TimeQueryHandler, MapQueryHandler, SettingHandler, DeleteAdminHandler, ManageHandler, RuleHandler, CheckHandler, StudentEditHandler, StudentHandler, adminHandler, AdminJaLoginHandler, AdminJaLogoutHandler
+from handlers import DetectCreateHandler , DetectResultHandler ,CheckStatusHandler, JaLoginHandler, JaLogoutHandler, FaceppHandler, FaceRegisterHandler, SpeechTrainHandler, SpeechDetectHandler, UploadLocationHandler
+from basic import LoginHandler , RegisterHandler
+from location import LocationRegisterHandler
 
 class Application(tornado.web.Application):
 	def __init__(self):

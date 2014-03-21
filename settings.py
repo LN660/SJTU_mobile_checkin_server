@@ -4,7 +4,7 @@ import base64
 
 PORT = 8888
 
-HOST = "192.168.1.143"
+HOST = "128.199.202.41"
 
 LOGGING_LEVEL = "debug"
 
