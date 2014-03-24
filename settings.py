@@ -1,4 +1,9 @@
 # coding: utf8
+
+'''
+Settings of MobileCheckin Server
+'''
+
 import os
 import base64
 

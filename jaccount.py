@@ -1,5 +1,11 @@
 #coding: utf8
 
+'''
+Jaccount sign in helpers
+
+
+'''
+
 import re
 import sys
 import string

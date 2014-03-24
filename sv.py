@@ -1,4 +1,17 @@
 # coding: utf8
+"""
+Sound Verification Module
+
+simply wrap a voice verification lib (libsv.so).
+input files should be normal wav format
+
+train(uid, filepath1, filepath2, filepath3)
+	training personal voice verification engine
+
+detect(uid, filepath)
+	verify a piece of voice
+
+"""
 
 from ctypes import cdll, c_int , c_char_p , c_double
 

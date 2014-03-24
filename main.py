@@ -1,5 +1,11 @@
 # coding: utf8
 
+'''
+Main file of MobileCheckin server
+
+`python main.py` to start
+'''
+
 import os
 import logging
 import settings as server_settings

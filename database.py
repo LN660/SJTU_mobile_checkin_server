@@ -1,5 +1,10 @@
 # coding: utf8
 
+'''
+MySql Database Helpers
+
+'''
+
 import MySQLdb
 
 class DB:
